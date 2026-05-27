@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pièces Auto des Pierrefitois - Découvrez notre sélection exclusive de pièces de voiture haut de gamme, neuves, reconditionnées et d'occasion. Contact direct WhatsApp.">
+    <title>Pièces Auto des Pierrefitois | Pièces Auto Premium & Performance</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Glow Elements -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 22L16 6L26 22H6Z" stroke="url(#logo-grad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 22L16 15.6L20 22H12Z" fill="url(#logo-grad)"/>
+                    <defs>
+                        <linearGradient id="logo-grad" x1="6" y1="6" x2="26" y2="22" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#00E5FF"/>
+                            <stop offset="1" stop-color="#00FF87"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>PIÈCES AUTO <span class="accent-text">DES PIERREFITOIS</span></span>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="#catalog" class="active">Catalogue</a>
+                <a href="#services">Garanties</a>
+                <a href="#about">À Propos</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://wa.me/33758313813" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-header">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                    </svg>
+                    <span>Support Direct</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge-premium">⭐ EXCELLENCE ET COMPATIBILITÉ GARANTIES</div>
+                <h1>Trouvez la Pièce <br><span class="gradient-text">Performance & Origine</span></h1>
+                <p class="hero-subtitle">Le catalogue ultime de pièces détachées premium sélectionnées par nos experts. Livraison rapide, authenticité vérifiée, et contact WhatsApp en un clic pour valider la compatibilité.</p>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <h3>100%</h3>
+                        <p>Certifié Conforme</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>24/48h</h3>
+                        <p>Livraison Rapide</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>+5k</h3>
+                        <p>Clients Satisfaits</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Featured Card -->
+            <div class="hero-featured-card">
+                <div class="featured-glow"></div>
+                <div class="featured-tag">🔥 À LA UNE</div>
+                <img src="assets/images/brake_disc.png" alt="Brembo Carbon Ceramic Brake Disc" class="featured-img">
+                <div class="featured-info">
+                    <h3>Disque Carbone-Céramique Brembo</h3>
+                    <p class="featured-desc">Kit complet avant, résistance thermique extrême.</p>
+                    <div class="featured-price-row">
+                        <span class="price">1 250 €</span>
+                        <button onclick="app.openDetail('BR-992-CC')" class="btn btn-primary btn-sm">Découvrir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content & Catalog -->
+    <main id="catalog" class="catalog-section">
+        <div class="section-header">
+            <div>
+                <h2 class="section-title">Notre Catalogue de Pièces</h2>
+                <p class="section-desc">Filtrez par catégorie, état ou recherchez directement la pièce exacte de votre véhicule.</p>
+            </div>
+            
+            <!-- Quick Search Bar -->
+            <div class="search-wrapper">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="search-input" placeholder="Rechercher une pièce, marque, référence...">
+                <button id="search-clear-btn" class="search-clear" style="display: none;">&times;</button>
+            </div>
+        </div>
+
+        <div class="catalog-layout">
+            <!-- Filter Sidebar -->
+            <aside class="filters-sidebar">
+                <div class="filter-group">
+                    <h4>Catégories</h4>
+                    <ul class="filter-list" id="category-filters">
+                        <li class="filter-item active" data-category="all">
+                            <span>Toutes les pièces</span>
+                            <span class="count" id="count-all">0</span>
+                        </li>
+                        <li class="filter-item" data-category="Moteur">
+                            <span>Moteur & Turbo</span>
+                            <span class="count" id="count-moteur">0</span>
+                        </li>
+                        <li class="filter-item" data-category="Échappement">
+                            <span>Échappement</span>
+                            <span class="count" id="count-echappement">0</span>
+                        </li>
+                        <li class="filter-item" data-category="Freinage">
+                            <span>Freinage</span>
+                            <span class="count" id="count-freinage">0</span>
+                        </li>
+                        <li class="filter-item" data-category="Suspension">
+                            <span>Suspension & Châssis</span>
+                            <span class="count" id="count-suspension">0</span>
+                        </li>
+                        <li class="filter-item" data-category="Habitacle">
+                            <span>Intérieur / Habitacle</span>
+                            <span class="count" id="count-habitacle">0</span>
+                        </li>
+                        <li class="filter-item" data-category="Éclairage">
+                            <span>Éclairage</span>
+                            <span class="count" id="count-eclairage">0</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="filter-group">
+                    <h4>État</h4>
+                    <div class="checkbox-group">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="condition" value="Neuf" checked>
+                            <span class="checkmark"></span>
+                            Neuf d'Origine
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="condition" value="Reconditionné" checked>
+                            <span class="checkmark"></span>
+                            Reconditionné A+
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="condition" value="Occasion" checked>
+                            <span class="checkmark"></span>
+                            Occasion Certifiée
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Gamme de Prix</h4>
+                    <div class="price-range-inputs">
+                        <div class="range-field">
+                            <label>Min (€)</label>
+                            <input type="number" id="price-min" value="0" min="0">
+                        </div>
+                        <div class="range-field">
+                            <label>Max (€)</label>
+                            <input type="number" id="price-max" value="2000" min="0">
+                        </div>
+                    </div>
+                    <button id="btn-apply-filters" class="btn btn-secondary btn-full btn-sm mt-3">Appliquer les filtres</button>
+                </div>
+            </aside>
+
+            <!-- Product Grid -->
+            <div class="products-grid-container">
+                <div class="products-grid" id="products-grid">
+                    <!-- Dynamic Product Cards Go Here -->
+                </div>
+                
+                <!-- No Results State -->
+                <div class="no-results" id="no-results" style="display: none;">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="8" y1="12" x2="16" y2="12"></line>
+                    </svg>
+                    <h3>Aucune pièce ne correspond à vos critères</h3>
+                    <p>Modifiez vos filtres ou effectuez une autre recherche.</p>
+                    <button id="btn-reset-filters" class="btn btn-primary">Réinitialiser les filtres</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Services Banner -->
+    <section id="services" class="services-section">
+        <div class="services-container">
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </div>
+                <h4>Authenticité Garantie</h4>
+                <p>Chaque pièce subit un contrôle technique approfondi avant sa mise en vente.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="1" y="3" width="15" height="13"></rect>
+                        <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                        <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                        <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                    </svg>
+                </div>
+                <h4>Livraison Express 24/48h</h4>
+                <p>Emballage ultra-sécurisé adapté aux pièces fragiles et lourdes.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    </svg>
+                </div>
+                <h4>Conseil WhatsApp Direct</h4>
+                <p>Besoin de vérifier la compatibilité avec votre plaque ou châssis ? Contactez-nous.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 22L16 6L26 22H6Z" stroke="url(#logo-grad-f)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                            <linearGradient id="logo-grad-f" x1="6" y1="6" x2="26" y2="22" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#00E5FF"/>
+                                <stop offset="1" stop-color="#00FF87"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span>PIÈCES AUTO <span class="accent-text">DES PIERREFITOIS</span></span>
+                </div>
+                <p>Spécialiste de la pièce détachée automobile haut de gamme et haute performance.</p>
+            </div>
+            
+            <div class="footer-links-group">
+                <h4>Catégories</h4>
+                <a href="#catalog" onclick="app.setCategory('Moteur')">Moteur & Turbo</a>
+                <a href="#catalog" onclick="app.setCategory('Freinage')">Freinage Haute Performance</a>
+                <a href="#catalog" onclick="app.setCategory('Suspension')">Suspension & Amortisseurs</a>
+                <a href="#catalog" onclick="app.setCategory('Éclairage')">Phares & Éclairage</a>
+            </div>
+
+            <div class="footer-links-group">
+                <h4>Contact & Support</h4>
+                <p class="support-text">Notre équipe est disponible 6j/7 pour répondre à toutes vos questions de compatibilité mécanique.</p>
+                <a href="https://wa.me/33758313813" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-full">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                    </svg>
+                    <span>Nous contacter sur WhatsApp</span>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PIÈCES AUTO DES PIERREFITOIS. Tous droits réservés. Développé pour des performances d'exception.</p>
+        </div>
+    </footer>
+
+    <!-- Details Overlay Modal -->
+    <div id="details-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-card">
+            <button id="btn-close-modal" class="modal-close-btn">&times;</button>
+            <div class="modal-content-layout" id="modal-content">
+                <!-- Dynamic Content Loads Here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- App Script -->
+    <script src="app.js"></script>
+</body>
+</html>
